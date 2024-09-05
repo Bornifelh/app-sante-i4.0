@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Industrie 4.0</title>
+    <link rel="stylesheet" href="../asset/css/style.css">
+    <script type="module" src="../asset/script/main-script.js"></script>
+    <script src="./bundle.js"></script>
+</head>
+<body>
+    <!-- En tete -->
+    <header>
+        <div class="toolbar">
+            <h1>Gestionnaire des données Patients - INDUSTRIE 4.0</h1>
+            <div id="nameUser"></div>
+          </div>
+        <nav class="navbar">
+            <ul>
+                <a id="open-modal-np" href="#" expand="block">Nouveau patient</a>
+            </ul>
+            <ul>
+                <a id="open-modal-pp" href="#" expand="block">Parametres du patients</a>
+            </ul>
+            <ul>
+                <a id="open-modal-lp" href="#" expand="block">Liste des patients</a>
+            </ul>
+            <div class="btns-login-logout">
+                <button class="googlebutton">Sign In Google</button>
+
+                <button class="logout">Deconnexion</button>
+            </div>
+            
+        </nav>
+    </header>
+
+    <!-- Corps -->
+    <main>
+
+        <!-- Modal nouveau patient -->
+         
+        
+          <div id="modal" class="modal">
+            <div class="modal-content">
+              <div class="toolbar">
+                <button class="button" id="close-modal">Retour</button>
+                <h1>Nouveau Patient</h1>
+              </div>
+              <form class="content">
+                <section class="section">
+                    <label for="name">Nom complet </label>
+                    <input name="nomcomplet" id="name" type="text" placeholder="Nom & Prenom du patient">
+                </section>
+                <section class="section">
+                    <label for="name">Sexe </label>
+                    <select name="sexe" id="sexe" class="section">
+                        <option value="Homme">Homme</option>
+                        <option value="Femme">Femme</option>
+                    </select>
+                </section>
+                <section class="section">
+                    <label for="name">Date de Naissance </label>
+                    <input name="datenaissance" id="name" type="date" placeholder="date de naissance">
+                </section>
+
+                <section class="section">
+                    <label for="name">Age</label>
+                    <input name="age" id="name" placeholder="Age du patient">
+                </section>
+
+                <section class="section">
+                    <label for="name">Id interne</label>
+                    <input name="idInterne" id="name" placeholder="Id interne">
+                </section>
+
+                <section class="section">
+                    <label for="name">Numero chambre </label>
+                    <input name="chambrepatient" id="name" type="text" placeholder="Chambre du patient">
+                </section>
+
+                <!-- Button ajout -->
+                 <button class="submit" type="submit">Ajouter le patient</button>
+            </form>
+            </div>
+          </div>
+
+
+          <!-- Liste des utilisateurs -->
+
+          <div id="modal-list-patient" class="modal">
+            <div class="modal-content-2">
+              <div class="toolbar-2">
+                <div class="section-button">
+                    <button class="button" id="close-modal-lp">Retour</button>
+
+                    <!-- Button ajout -->
+                    <button class="button" type="submit">Imprimer</button>
+                </div>
+                
+                <h1>Liste des patients</h1>
+              </div>
+              <!-- Div liste des patients -->
+              <div class="content-list">
+                <!-- Liste des patients -->
+                <div id="patients-list"></div>
+              </div>
+
+            </div>
+          </div>
+
+<!-- parametre patient -->
+          <div id="modal-param" class="modal">
+            <div class="modal-content-2">
+              <div class="toolbar-2">
+                <div class="section-button">
+                    <button class="button" id="close-modal-pp">Retour</button>
+
+                    <!-- Button ajout -->
+                    <button class="button" type="submit">Imprimer</button>
+                </div>
+                
+                <h1>Parametres des patients</h1>
+              </div>
+
+              <!-- Div saisie des paramettres -->
+              <div class="content-parametre">
+                <!-- Liste des patients -->
+                <div id="patients-param"></div>
+              </div>
+            </div>
+          </div>
+          
+    </main>
+
+    <!-- Pied de page -->
+    <footer></footer>
+</body>
+</html> 
